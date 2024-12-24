@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiction Books Library</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="books.css">
+
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/book_logo.png" alt="Logo"> Bookle
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#categories">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="authors.html">Authors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#history">Borrowing History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#manage">Manage Library</a>
+          </li>
+        </ul>
+          <!-- <i class="fas fa-sign-in-alt"></i> 
+          <i class="fas fa-user-plus"></i>  -->
+        <div class="search-input-container">
+            <input type="text" id="bookSearch" placeholder="Search books..." autocomplete="off">
+            <div id="searchResults" class="dropdown-list"></div>
+            <button id="searchBtn" class="btn">Search</button> <!-- Search button -->
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+   <!-- Header -->
+   <header>
+    Welcome to the fantacy Library
+  </header>
+
+ <!-- Book Categories Section -->
+
+<section class="categories-section">
+    <div class="marquee">
+        <div class="category">
+            <a href="fantacy.html">
+                <img src="images/fantasy.avif" alt="Fantasy">
+                <span>Fantasy</span>
+            </a>
+        </div>
+        <div class="category">
+            <a href="science.html">
+                <img src="images/science.jpg" alt="Science Fiction">
+                <span>Science</span>
+            </a>
+        </div>
+        <div class="category">
+            <a href="history.html">
+                <img src="images/R.jfif" alt="Historical Fiction">
+                <span>Historical</span>
+            </a>
+        </div>
+        <div class="category">
+            <a href="mystery.html">
+                <img src="images/mystery.jpg" alt="Romance">
+                <span>Mystery</span>
+            </a>
+        </div>
+        <div class="category">
+            <a href="biography.html">
+                <img src="images/bio.jfif" alt="Horror">
+                <span>Biography</span>
+            </a>
+        </div>
+        <div class="category">
+            <a href="fiction.html">
+                <img src="images/fiction.jfif" alt="Classics">
+                <span>Fiction</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+  <!-- books -->
+ 
+
+
+  <div class="container my-5">
+    <div class="row g-4" id="bookContainer">
+        <!-- Book 1 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="Harry Potter and the Sorcerer's Stone">
+            <div class="book-card">
+                <img src="images/HarryPotter.jpg" alt="Harry Potter and the Sorcerer's Stone">
+                <div class="book-info">
+                    <h5>Harry Potter and the Sorcerer's Stone</h5>
+                    <p>by J.K. Rowling</p>
+                    <p>A young wizard discovers his magical heritage and faces dark forces.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="The Hobbit">
+            <div class="book-card">
+                <img src="images/TheHobbit.jpg" alt="The Hobbit">
+                <div class="book-info">
+                    <h5>The Hobbit</h5>
+                    <p>by J.R.R. Tolkien</p>
+                    <p>Bilbo Baggins embarks on an epic adventure to reclaim a stolen treasure.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="The Name of the Wind">
+            <div class="book-card">
+                <img src="images/TheNameOfTheWind.jpg" alt="The Name of the Wind">
+                <div class="book-info">
+                    <h5>The Name of the Wind</h5>
+                    <p>by Patrick Rothfuss</p>
+                    <p>The tale of Kvothe, a gifted musician and magician, as he rises to legend.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="A Game of Thrones">
+            <div class="book-card">
+                <img src="images/AGameOfThrones.jpg" alt="A Game of Thrones">
+                <div class="book-info">
+                    <h5>A Game of Thrones</h5>
+                    <p>by George R.R. Martin</p>
+                    <p>The first book in an epic series of political intrigue and war in a fantasy world.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="Mistborn: The Final Empire">
+            <div class="book-card">
+                <img src="images/Mistborn.jpg" alt="Mistborn: The Final Empire">
+                <div class="book-info">
+                    <h5>Mistborn: The Final Empire</h5>
+                    <p>by Brandon Sanderson</p>
+                    <p>A heist in a world where magic is controlled by ingesting metals.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="The Lies of Locke Lamora">
+            <div class="book-card">
+                <img src="images/TheLiesOfLockeLamora.jpg" alt="The Lies of Locke Lamora">
+                <div class="book-info">
+                    <h5>The Lies of Locke Lamora</h5>
+                    <p>by Scott Lynch</p>
+                    <p>An orphan-turned-thief schemes in the intricate underworld of Camorr.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 7 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="Eragon">
+            <div class="book-card">
+                <img src="images/Eragon.jpg" alt="Eragon">
+                <div class="book-info">
+                    <h5>Eragon</h5>
+                    <p>by Christopher Paolini</p>
+                    <p>A farm boy discovers a dragon egg and embarks on a heroic journey.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 8 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="The Night Circus">
+            <div class="book-card">
+                <img src="images/TheNightCircus.jpg" alt="The Night Circus">
+                <div class="book-info">
+                    <h5>The Night Circus</h5>
+                    <p>by Erin Morgenstern</p>
+                    <p>A magical competition unfolds in a circus open only at night.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 9 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="The Priory of the Orange Tree">
+            <div class="book-card">
+                <img src="images/ThePrioryOfTheOrangeTree.jpg" alt="The Priory of the Orange Tree">
+                <div class="book-info">
+                    <h5>The Priory of the Orange Tree</h5>
+                    <p>by Samantha Shannon</p>
+                    <p>An epic feminist fantasy with dragons and ancient prophecies.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 10 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="Good Omens">
+            <div class="book-card">
+                <img src="images/GoodOmens.jpg" alt="Good Omens">
+                <div class="book-info">
+                    <h5>Good Omens</h5>
+                    <p>by Neil Gaiman and Terry Pratchett</p>
+                    <p>A comedic tale of an angel and demon teaming up to stop the apocalypse.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 11 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="The Wheel of Time: The Eye of the World">
+            <div class="book-card">
+                <img src="images/TheEyeOfTheWorld.jpg" alt="The Eye of the World">
+                <div class="book-info">
+                    <h5>The Eye of the World</h5>
+                    <p>by Robert Jordan</p>
+                    <p>The beginning of an epic journey to save the world from darkness.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 12 -->
+        <div class="col-md-4 col-sm-6 book-card-container" data-book-name="Uprooted">
+            <div class="book-card">
+                <img src="images/Uprooted.jpg" alt="Uprooted">
+                <div class="book-info">
+                    <h5>Uprooted</h5>
+                    <p>by Naomi Novik</p>
+                    <p>A young woman must protect her village from a dark, enchanted forest.</p>
+                    <button class="btn-details">Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            
+            <!-- About Section -->
+            <div class="footer-brand">
+              <img src="images/book_logo.png" alt="Library Logo">
+              <h3>Bookle Library</h3>
+              <p>Empowering minds with knowledge. Visit us for an extensive collection of books and resources.</p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#manage">Authors</a></li>
+                <li><a href="#history">Borrowing History</a></li>
+                
+              </ul>
+            </div>
+      
+            <!-- Contact Information -->
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p><i class="fas fa-map-marker-alt"></i> 123 Library Street, Knowledge City</p>
+              <p><i class="fas fa-phone-alt"></i> +1 234 567 890</p>
+              <p><i class="fas fa-envelope"></i> contact@booklelibrary.com</p>
+            </div>
+            
+            <!-- Social Media Icons -->
+             <div class="social-icons">
+              <div class="icon-container">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+              <div class="icon-container">
+                <i class="fab fa-twitter"></i>
+              </div>
+              <div class="icon-container">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div class="icon-container">
+                <i class="fab fa-linkedin-in"></i>
+              </div> 
+            </div>
+      
+          </div>
+      
+          <!-- Footer Bottom -->
+          <div class="footer-bottom">
+            <p>&copy; 2024 Bookle Library. All rights reserved. 📚</p>
+          </div>
+        </div>
+      </footer>
+      <script>
+        
+  
+//   document.getElementById("bookSearch").addEventListener("input", function () {
+//             let input = document.getElementById("bookSearch").value.toLowerCase(); 
+//             let bookCards = document.querySelectorAll(".book-card-container"); 
+
+            
+//             bookCards.forEach(function (card) {
+//                 let bookName = card.querySelector(".book-info h5").textContent.toLowerCase(); 
+
+               
+//                 if (bookName.includes(input)) {
+//                     card.style.display = "block"; 
+//                 } else {
+//                     card.style.display = "none"; 
+//                 }
+//             });
+//         }
+    
+
+  // Dropdown functionality on keyup
+  document.getElementById('bookSearch').addEventListener('keyup', function () {
+  const searchQuery = this.value.toLowerCase();
+  const books = document.querySelectorAll('.book-card-container');
+  const searchResultsContainer = document.getElementById('searchResults');
+  searchResultsContainer.innerHTML = '';
+
+  if (searchQuery.trim() === '') {
+      searchResultsContainer.style.display = 'none';
+      return;
+  }
+
+  let matchedBooks = 0;
+
+  books.forEach(function (book) {
+      const bookName = book.getAttribute('data-book-name').toLowerCase();
+
+      if (bookName.includes(searchQuery)) {
+          matchedBooks++;
+          const bookOption = document.createElement('div');
+          bookOption.classList.add('dropdown-item');
+          bookOption.textContent = bookName;
+
+          bookOption.addEventListener('click', function () {
+              document.getElementById('bookSearch').value = bookName;
+              searchResultsContainer.style.display = 'none';
+          });
+
+          searchResultsContainer.appendChild(bookOption);
+      }
+  });
+
+  if (matchedBooks > 0) {
+      searchResultsContainer.style.display = 'block';
+      searchResultsContainer.classList.add('show'); 
+  } else {
+      searchResultsContainer.style.display = 'none';
+      searchResultsContainer.classList.remove('show'); 
+  }
+});
+
+// Filter results on button click
+document.getElementById('searchBtn').addEventListener('click', function () {
+  const input = document.getElementById('bookSearch').value.toLowerCase(); 
+  const bookCards = document.querySelectorAll('.book-card-container'); 
+
+  // Filter book cards
+  bookCards.forEach(function (card) {
+      const bookName = card.querySelector('.book-info h5').textContent.toLowerCase(); 
+
+      // Show or hide the book card based on the search query
+      if (bookName.includes(input)) {
+          card.style.display = 'block'; 
+      } else {
+          card.style.display = 'none';
+      }
+  });
+});
+
+
+
+
+        
+            </script>
+    <!-- Bootstrap JS -->
+   <script src="javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
